@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+Employee Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Employee Management CRUD application made using React and Vite.
 
-## Available Scripts
+Features
 
-In the project directory, you can run:
+Add employee
 
-### `npm start`
+View employee list
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Edit employee details
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Delete employee
 
-### `npm test`
+Form validation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Search employee by name
 
-### `npm run build`
+Filter employee by department
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Save data in browser localStorage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Responsive design
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Technologies Used
 
-### `npm run eject`
+React
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Vite
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+JavaScript
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Local Storage
 
-## Learn More
+How to Run
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+First, make sure Node.js is installed in your system.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open the project folder in terminal and run:
 
-### Code Splitting
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+After installation is completed, run:
 
-### Analyzing the Bundle Size
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Then open the URL shown in the terminal. Normally it will be:
 
-### Making a Progressive Web App
+http://localhost:5173
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Production Build
 
-### Advanced Configuration
+To create a production build, run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm run build
 
-### Deployment
+Data Storage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Employee data is saved in browser localStorage, so the data will remain after refreshing the page.
 
-### `npm run build` fails to minify
+No backend or database is used in this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Packages Used
+
+React
+
+React DOM
+
+Vite
+
+@vitejs/plugin-react
+
+1. How did you manage the application state and data?
+
+I used React useState to manage employee data and form state. I used localStorage to save the employee data, so it remains available after refreshing the page.
+
+2. Why did you choose your particular technology and storage approach?
+
+I chose React because it is simple for building reusable components and handling UI updates. I used localStorage because this was a basic CRUD machine test and it doesn't require a backend or database.
+
+3. How did you implement validation?
+
+I added validation before saving the employee. I check that the name is required, email is valid, mobile has 10 digits, department is selected, and salary is a valid number.
+
+4. How would you handle 1,000+ employee records?
+
+For 1,000+ records, I would use a backend database with an API instead of localStorage. I would also use pagination, server-side search and filtering to improve performance.
+
+5. How would you connect this application to a REST API?
+I would replace localStorage with API calls using fetch(). For example:
+
+GET    /employees
+POST   /employees
+PUT    /employees/:id
+DELETE /employees/:id
+
+6. How would you improve the application for production?
+I would add a backend and database, authentication, better error handling, server-side validation, pagination, testing, security and proper logging.
